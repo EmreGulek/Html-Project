@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)http://127.0.0.1:5500/x.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+    <title>site</title>
+    
+    <style>
+        form{
+            background-color: rgb(252, 218, 169);
+            text-align: center;
+            
+            margin-right: 300px;
+            margin-top: 10px;
+            height: 800px;
+            
+            
+        }
+        button {
+            background-color: rgb(254, 225, 168) ;
+            margin-top:6px;
+        }
+        button:hover{
+            background-color: rgb(248, 190, 75);
+        }
+
+       input{
+        
+        text-align: center;
+        margin-top:2px;
+       }
+       input:hover{
+        background-color: cornsilk;
+       }
+       
+       textarea{
+        width:200px;
+        height:120px;
+        margin-top: 6px;
+       
+
+       }
+       textarea:hover{
+        background-color: cornsilk;
+      
+       }
+       
+       
+    </style>
+
+</head>
+
+ <body>
+   <div>
+   <form action="http://127.0.0.1:5500/x.html#" method="post">
+
+   <label for="username">Adınız ve Soyadınız :</label><br>
+   <input style="width:200px;" type="text" id="username" name="username"><br>
+   <label for="password">Şifre :</label><br>
+   <input style="width:200px;" type="password" id="password" name="password"><br>
+   <label for="email">E-mail :</label><br>
+   <input style="width:200px;" type="email" id="email" name="email"><br>
+   <label for="tel">Telefon :</label><br>
+   <input style="width:200px;" type="tel" id="tel" name="tel" pattern="[0-9]{11}" <br=""><br>
+   <label for="birthday">Doğum Günü : </label><br>
+   <input style="margin-block-end: 5px;  width:200px;" type="date" id="month" name="month"><br>
+   <label for="CV">Özgeçmiş :</label><br>
+   <input style="margin-top:3px; margin-block-end: 5px; width:205px; background-color: white;" type="file" id="file" name="file"><br>
+   <label for="Linkedin">Linkedin Profili :</label><br>
+   <input style="width:200px; margin-top:2px; margin-block-end: 5px;" type="url" name="url" id="url"><br>
+   <label> Cinsiyetiniz :</label><br>
+   <input type="radio" name="cinsiyet" id="erkek" value="kadın" style="margin-top:5px;"><label for="erkek">Erkek </label><br>
+   <input type="radio" name="cinsiyet" id="kadın" value="erkek" style="margin-top:3px;"><label for="kadın">Kadın </label><br>
+   <br>
+
+   <label for="choise">Aşağıdaki seçeneklerden <br>
+    size uygun olanları seçiniz : 
+</label><br>
+<br>
+   <input type="checkbox" name="askerlik" id="askerlik" value="askerlik" style="margin-left:12%"><label for="askerlik">Askerliğimi yaptım.</label><br>
+   <input type="checkbox" name="dil" id="ingilizce" value="ingilizce" style="margin-left:12%;"><label for="ingilizce">İngilizce biliyorum.</label><br>
+   <input type="checkbox" name="dil" id="almanca" value="almanca" style="margin-left:13%;"><label for="almanca">Almanca biliyorum.</label><br>
+   <input type="checkbox" name="tecrübe" id="tec" value="t" style="margin-left: 20%"><label for="tec">Sektörde tecrübem var.</label>
+
+
+
+   <button style=" margin-left:170px; margin-top:14px; margin-bottom: 14px;">Gönder</button><br>
+  
+   <textarea>   
+ 
+   Yorumunuzu Yazınız.
+   
+</textarea><br>
+<input type="image" style="width:30px; height:30px; margin-left:160px; margin-top: 6px;" src="./project1_files/k.png">
+   </form>
+   </div>
+
+ <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+   
+
+</body></html>
